@@ -1,6 +1,5 @@
-import Image from "next/image";
-import cozyroom2 from "../public/images/other/cozyroom2.jpg";
-import Link from "next/link";
+import { Link } from "react-router";
+import cozyroom2 from "/images/other/cozyroom2.jpg";
 
 const ShopNow = () => {
   return (
@@ -16,18 +15,17 @@ const ShopNow = () => {
             estetyką.
           </p>
           <Link
-            href={"/categories"}
+            to={"/categories"}
             className="bg-yellow-600 border border-yellow-600 px-3 py-1 uppercase text-white hover:bg-white hover:text-yellow-600 hover:border-black cursor-pointer duration-300"
           >
             eksploruj
           </Link>
         </div>
         <div className="hidden md:block relative  w-1/2">
-          <Image
+          <img
             src={cozyroom2}
-            fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover"
+            className="object-cover h-full w-full"
             alt="cozy room"
           />
         </div>

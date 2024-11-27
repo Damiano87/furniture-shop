@@ -5,8 +5,8 @@ import bedroom from "/images/other/bedroom.jpg";
 
 const Mosaic = () => {
   return (
-    <section className="h-screen pt-44">
-      <div className="max-w-5xl md:h-[25rem] h-[300px] grid md:grid-cols-[2fr,1fr,1fr] gap-4 mx-5 lg:mx-auto">
+    <section className=" pt-44">
+      <div className="max-w-5xl md:h-[25rem] grid md:grid-cols-[2fr,1fr,1fr] gap-4 mx-5 lg:mx-auto">
         <div className="overflow-hidden h-[300px] md:h-full relative row-span-2">
           <img
             src={cozyroom}

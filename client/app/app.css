@@ -66,3 +66,23 @@ Cart scrollbar styling
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--secondary);
 }
+
+/* ===================
+Trendy scrollbar styling
+======================*/
+
+.carousel {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+[data-theme="dark"] {
+  --my-color: #000;
+}
+[data-theme="pink"] {
+  --my-color: #ffabc8;
+}
