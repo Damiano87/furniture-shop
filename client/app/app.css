@@ -79,10 +79,3 @@ Trendy scrollbar styling
 .carousel::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
-
-[data-theme="dark"] {
-  --my-color: #000;
-}
-[data-theme="pink"] {
-  --my-color: #ffabc8;
-}
