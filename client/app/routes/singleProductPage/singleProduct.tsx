@@ -18,7 +18,6 @@ const singleProductPage = () => {
   const [quantity, setQuantity] = useState(1);
 
   const id = useParams().id;
-  console.log(id);
   const singleProduct = data?.find((product) => product.id === Number(id));
 
   const { name, price, category, inStore, likes, images } =

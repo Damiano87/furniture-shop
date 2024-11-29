@@ -1,8 +1,6 @@
-// contexts/VisibilityContext.tsx
 import {
   createContext,
   useState,
-  useContext,
   ReactNode,
   Dispatch,
   SetStateAction,
