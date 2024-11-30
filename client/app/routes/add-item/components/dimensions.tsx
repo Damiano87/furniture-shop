@@ -1,28 +1,28 @@
 import { useState } from "react";
 import { MainInputsProps } from "~/utils/types";
 
-type Detail = {
+type Dimension = {
   key: string;
   value: string;
 };
 
-const Details = ({ label, input }: MainInputsProps) => {
-  const [details, setDetails] = useState<Detail[]>([]);
+const Dimensions = ({ label, input }: MainInputsProps) => {
+  const [dimensions, setDimensions] = useState<Dimension[]>([]);
   const [key, setKey] = useState("");
   const [value, setValue] = useState("");
 
   // add item
   const addItem = () => {
-    setDetails((prev) => [...prev, { key: key, value: value }]);
+    setDimensions((prev) => [...prev, { key: key, value: value }]);
     setKey("");
     setValue("");
   };
 
   return (
-    <section className="border-t-2 border-amber-500 mt-8">
-      <h2 className="text-2xl font-bold mt-3 mb-8">Szczegóły</h2>
+    <section className="border-t-2 border-purple-700 mt-8">
+      <h2 className="text-2xl font-bold mt-3 mb-8">Wymiary</h2>
 
-      <div className="flex flex-col sm:flex-row items-start justify-between max-w-[40rem]">
+      <div className="flex items-start justify-between max-w-[40rem]">
         <div className="space-y-3">
           {/* key */}
           <div>
@@ -53,16 +53,16 @@ const Details = ({ label, input }: MainInputsProps) => {
 
           <button
             type="button"
-            className="capitalize bg-amber-500 text-white px-4 py-1 border-2 border-black hover:scale-105 duration-300"
+            className="capitalize bg-purple-700 text-white px-4 py-1 border-2 border-black hover:scale-105 duration-300"
             onClick={addItem}
           >
             add
           </button>
         </div>
 
-        {/* details */}
-        <ul className="mt-8 md:mt-0">
-          {details.map((item, index) => {
+        {/* dimensions */}
+        <ul>
+          {dimensions.map((item, index) => {
             return (
               <li key={index} className="font-semibold">
                 <span className="capitalize">{item.key}</span>:{" "}
@@ -75,4 +75,4 @@ const Details = ({ label, input }: MainInputsProps) => {
     </section>
   );
 };
-export default Details;
+export default Dimensions;

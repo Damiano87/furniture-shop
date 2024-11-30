@@ -1,5 +1,9 @@
 import Details from "./components/details";
+import Dimensions from "./components/dimensions";
+import Features from "./components/features";
 import MainInputs from "./components/mainInputs";
+import Offer from "./components/offer";
+import Resistance from "./components/resistance";
 
 const AddItemPage = () => {
   const label = "font-semibold capitalize block mb-1";
@@ -13,7 +17,16 @@ const AddItemPage = () => {
 
         {/* main inputs */}
         <MainInputs label={label} input={input} />
+        {/* details */}
         <Details label={label} input={input} />
+        {/* features */}
+        <Features label={label} input={input} />
+        {/* demensions */}
+        <Dimensions label={label} input={input} />
+        {/* offer */}
+        <Offer label={label} input={input} />
+        {/* resistance */}
+        <Resistance label={label} input={input} />
       </div>
     </main>
   );
