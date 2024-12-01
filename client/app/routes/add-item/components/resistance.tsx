@@ -1,43 +1,36 @@
 import { useState, useEffect } from "react";
-import { MainInputsProps } from "~/utils/types";
 
-// type ResistanceType = {
-//   list: string[];
-//   desc: string;
-// };
-
-const Resistance = ({ label, input }: MainInputsProps) => {
+const Resistance = () => {
   const [resistList, setResistList] = useState<string[]>([]);
   const [value, setValue] = useState("");
   const [desc, setDesc] = useState("");
   const [descDisplay, setDescDisplay] = useState("");
 
-  // Obserwuj zmiany w resistList
   useEffect(() => {
     console.log(resistList);
-    console.log(desc);
+    console.log(descDisplay);
   }, [resistList]);
 
   // add item
   const addItem = () => {
-    // Użyj funkcji aktualizującej stan, która gwarantuje dostęp do najnowszej wartości
     setResistList((prevList) => {
-      // Upewnij się, że dodajesz niepustą wartość
       const newList = value.trim() ? [...prevList, value.trim()] : prevList;
       return newList;
     });
     setDescDisplay(desc);
+    setValue("");
+    setDesc("");
   };
 
   return (
     <section className="border-t-[5px] border-black mt-14">
       <h2 className="text-2xl font-bold mt-3 mb-8">Odporność</h2>
 
-      <div className="flex items-start justify-between max-w-[70rem]">
+      <div className="flex flex-col md:flex-row items-start justify-between max-w-[70rem]">
         <div className="space-y-3 w-full">
           {/* value */}
           <div>
-            <label htmlFor="value" className={`${label}`}>
+            <label htmlFor="value" className="custom-label">
               odporność na:
             </label>
             <input
@@ -45,12 +38,12 @@ const Resistance = ({ label, input }: MainInputsProps) => {
               id="value"
               value={value}
               onChange={(e) => setValue(e.target.value)}
-              className={`${input}`}
+              className="custom-input input input-bordered"
             />
           </div>
           {/* description */}
           <div>
-            <label htmlFor="description" className={`${label}`}>
+            <label htmlFor="description" className="custom-label">
               opis
             </label>
             <textarea
@@ -72,7 +65,7 @@ const Resistance = ({ label, input }: MainInputsProps) => {
         </div>
 
         {/* resistList */}
-        <div className="space-y-5 max-w-[10rem]">
+        <div className="space-y-5 px-5 mt-5">
           <ul className="list-disc">
             {resistList.map((item, index) => {
               if (item === "") return null;
@@ -83,7 +76,7 @@ const Resistance = ({ label, input }: MainInputsProps) => {
               );
             })}
           </ul>
-          <p className="text-wrap">{descDisplay}</p>
+          <p className="break-words w-full max-w-[15rem]">{descDisplay}</p>
         </div>
       </div>
     </section>

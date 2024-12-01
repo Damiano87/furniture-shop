@@ -5,3 +5,7 @@ export const formatToPLN = (price: number) => {
     currency: "PLN",
   }).format(price);
 };
+
+// Uppercase first letter of a string
+export const capitalizeFirstLetter = (str: string) =>
+  str.charAt(0).toUpperCase() + str.slice(1);

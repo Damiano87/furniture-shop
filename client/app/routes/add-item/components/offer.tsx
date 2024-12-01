@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { MainInputsProps } from "~/utils/types";
 
-const Offer = ({ label, input }: MainInputsProps) => {
+const Offer = () => {
   const [offers, setOffers] = useState<string[]>([]);
   const [value, setValue] = useState("");
 
@@ -19,7 +18,7 @@ const Offer = ({ label, input }: MainInputsProps) => {
         <div className="space-y-3">
           {/* value */}
           <div>
-            <label htmlFor="value" className={`${label}`}>
+            <label htmlFor="value" className="custom-label">
               oferta
             </label>
             <input
@@ -27,7 +26,7 @@ const Offer = ({ label, input }: MainInputsProps) => {
               id="value"
               value={value}
               onChange={(e) => setValue(e.target.value)}
-              className={`${input}`}
+              className="custom-input input input-bordered"
             />
           </div>
 

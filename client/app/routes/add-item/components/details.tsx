@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { MainInputsProps } from "~/utils/types";
 
 type Detail = {
   key: string;
   value: string;
 };
 
-const Details = ({ label, input }: MainInputsProps) => {
+const Details = () => {
   const [details, setDetails] = useState<Detail[]>([]);
   const [key, setKey] = useState("");
   const [value, setValue] = useState("");
@@ -26,7 +25,7 @@ const Details = ({ label, input }: MainInputsProps) => {
         <div className="space-y-3">
           {/* key */}
           <div>
-            <label htmlFor="key" className={`${label}`}>
+            <label htmlFor="key" className="custom-label">
               klucz
             </label>
             <input
@@ -34,12 +33,12 @@ const Details = ({ label, input }: MainInputsProps) => {
               id="key"
               value={key}
               onChange={(e) => setKey(e.target.value)}
-              className={`${input}`}
+              className="custom-input input input-bordered"
             />
           </div>
           {/* value */}
           <div>
-            <label htmlFor="value" className={`${label}`}>
+            <label htmlFor="value" className="custom-label">
               wartość
             </label>
             <input
@@ -47,7 +46,7 @@ const Details = ({ label, input }: MainInputsProps) => {
               id="value"
               value={value}
               onChange={(e) => setValue(e.target.value)}
-              className={`${input}`}
+              className="custom-input input input-bordered"
             />
           </div>
 

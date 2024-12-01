@@ -11,6 +11,14 @@ body {
   }
 } */
 
+.custom-label {
+  @apply font-semibold capitalize block mb-1;
+}
+
+.custom-input {
+  @apply border-2 border-black w-full focus:outline-none focus:border-amber-500 max-w-[20rem];
+}
+
 .kategorie,
 .popularne {
   position: relative;

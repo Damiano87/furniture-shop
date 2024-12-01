@@ -1,46 +1,64 @@
-import { type MainInputsProps } from "~/utils/types";
-
-const MainInputs = ({ label, input }: MainInputsProps) => {
+const MainInputs = () => {
   return (
     <section className="space-y-3">
       {/* name */}
       <div>
-        <label htmlFor="name" className={`${label}`}>
+        <label htmlFor="name" className="custom-label">
           name
         </label>
-        <input type="text" id="name" className={`${input}`} />
+        <input
+          type="text"
+          id="name"
+          className="custom-input input input-bordered"
+        />
       </div>
       {/* price */}
       <div>
-        <label htmlFor="price" className={`${label}`}>
+        <label htmlFor="price" className="custom-label">
           price
         </label>
-        <input type="number" id="price" className={`${input}`} />
+        <input
+          type="number"
+          id="price"
+          className="custom-input input input-bordered"
+        />
       </div>
       {/* category */}
       <div>
-        <label htmlFor="category" className={`${label}`}>
+        <label htmlFor="category" className="custom-label">
           category
         </label>
-        <input type="text" id="category" className={`${input}`} />
+        <input
+          type="text"
+          id="category"
+          className="custom-input input input-bordered"
+        />
       </div>
       {/* likes */}
       <div>
-        <label htmlFor="likes" className={`${label}`}>
+        <label htmlFor="likes" className="custom-label">
           likes
         </label>
-        <input type="number" id="likes" className={`${input}`} />
+        <input
+          type="number"
+          id="likes"
+          className="custom-input input input-bordered"
+        />
       </div>
       {/* title */}
       <div>
-        <label htmlFor="title" className={`${label}`}>
+        <label htmlFor="title" className="custom-label">
           title
         </label>
-        <input type="text" id="title" className={`${input}`} />
+        <input
+          type="text"
+          id="title"
+          className="custom-input input input-bordered"
+        />
       </div>
       {/* description */}
       <div>
-        <label htmlFor="description" className={`${label}`}>
+        <label htmlFor="description" className="custom-label">
           description
         </label>
         <textarea
@@ -51,7 +69,7 @@ const MainInputs = ({ label, input }: MainInputsProps) => {
       </div>
       {/* inStore */}
       <div className="flex items-start gap-4">
-        <label htmlFor="inStore" className={`${label}`}>
+        <label htmlFor="inStore" className="custom-label">
           In store?
         </label>
         <input
